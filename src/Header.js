@@ -6,7 +6,7 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import InputBase from "@mui/material/InputBase";
-import { Fragment } from "react";
+import style from "./Header.module.css";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",
@@ -52,7 +52,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 
 function Header() {
   return (
-    <Fragment>
+    <div className={style.box}>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static">
           <Toolbar>
@@ -91,7 +91,7 @@ function Header() {
           </Toolbar>
         </AppBar>
       </Box>
-    </Fragment>
+    </div>
   );
 }
 export default Header;
