@@ -8,7 +8,6 @@ import queryString from "query-string";
 function MovieList(props) {
   const [movie, setMovie] = useState([]);
 
-  console.log("TEST");
   function fetchMovie(params) {
     axios
       .get(`https://www.omdbapi.com/?i=tt3896198&apikey=28101efb&s=${params}`)
@@ -17,7 +16,8 @@ function MovieList(props) {
       .then((movies) => setMovie(movies));
   }
   useEffect(() => {
-    let q = queryString.parse(props.location);
+    let q = queryString.parse(props.searchText);
+    console.log(q);
     fetchMovie(q.searchText);
   }, []);
   useEffect(() => {
