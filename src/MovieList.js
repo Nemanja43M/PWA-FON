@@ -4,6 +4,7 @@ import MovieCard from "./MovieCard";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import queryString from "query-string";
+import style from "./MovieList.module.css";
 
 function MovieList(props) {
   const [movie, setMovie] = useState([]);
@@ -24,7 +25,7 @@ function MovieList(props) {
     fetchMovie(props.search);
   }, [props.search]);
   return (
-    <div className="row">
+    <div className={style.box}>
       {movie.map((m) => (
         <MovieCard movie={m} key={m.imdbID} />
       ))}

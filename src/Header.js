@@ -17,7 +17,6 @@ function Header(props) {
     history.push("/movies?searchText=" + search.current.value);
     props.setSearch(search.current.value);
   };
-
   return (
     <div className={style.box}>
       <Box sx={{ flexGrow: 1 }}>

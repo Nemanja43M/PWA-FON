@@ -11,7 +11,7 @@ function App() {
 
   return (
     <div className={style.App}>
-      <Header setSearch={setSearch} />
+      <Header setSearch={setSearch} search={search} />
       <Route path="/" exact={true} component={Home}></Route>
       <div className="container">
         <Route
